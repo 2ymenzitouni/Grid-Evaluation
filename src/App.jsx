@@ -14,15 +14,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Route par défaut (Page de sélection) */}
-        <Route path="/" element={<Home />} />
+        <Route path="Grid-Evaluation" element={<Home />} />
 
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="Grid-Evaluation/login" element={<LoginPage />} />
 
         {/* Route pour l'enseignant */}
-        <Route path="/admin" element={<AdminPage />} />
+        <Route path="Grid-Evaluation/admin" element={<AdminPage />} />
 
         {/* Route pour l'étudiant */}
-        <Route path="/user" element={<UserPage />} />
+        <Route path="Grid-Evaluation/user" element={<UserPage />} />
       </Routes>
     </BrowserRouter>
   );

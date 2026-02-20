@@ -161,7 +161,7 @@ const AdminPage = () => {
     <div className="body-container">
       {/* Bouton de navigation retour */}
       <button
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/Grid-Evaluation/')}
         style={{
           marginBottom: '20px',
           padding: '10px 20px',

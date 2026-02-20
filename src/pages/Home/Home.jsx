@@ -13,7 +13,7 @@ const Home = () => {
 
         <div className="button-group">
           {/* Option Étudiant */}
-          <div className="role-option" onClick={() => navigate('/user')}>
+          <div className="role-option" onClick={() => navigate('user')}>
             <div className="icon">🎓</div>
             <h2>Étudiant</h2>
             <p>Passer mon évaluation</p>
@@ -21,7 +21,7 @@ const Home = () => {
           </div>
 
           {/* Option Enseignant -> REDIRIGE VERS LOGIN */}
-          <div className="role-option" onClick={() => navigate('/login')}>
+          <div className="role-option" onClick={() => navigate('login')}>
             <div className="icon">👨‍🏫</div>
             <h2>Enseignant</h2>
             <p>Gérer la grille d'évaluation</p>

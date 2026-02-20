@@ -12,7 +12,7 @@ const LoginPage = () => {
 
     // Vérification des identifiants spécifiques : adnene / admin
     if (username === 'adnene' && password === 'admin') {
-      navigate('/admin');
+      navigate('/Grid-Evaluation/admin');
     } else {
       alert('Identifiants incorrects. Veuillez réessayer.');
     }
@@ -47,7 +47,7 @@ const LoginPage = () => {
             Se connecter
           </button>
         </form>
-        <button className="back-btn" onClick={() => navigate('/')}>
+        <button className="back-btn" onClick={() => navigate('/Grid-Evaluation/')}>
           Retour à l'accueil
         </button>
       </div>
