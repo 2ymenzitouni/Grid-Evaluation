@@ -1,0 +1,104 @@
+.body-container {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.grid-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.table-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow-x: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+.eval-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f8f9fa;
+  color: #555;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.column-cell {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  vertical-align: top;
+  width: 20%;
+  background-color: #fafafa;
+  min-width: 200px;
+}
+
+.task-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.task-card h2 {
+  font-size: 15px;
+  margin: 0;
+  color: #4a90e2;
+  outline: none;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #ff7675;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.explication-text {
+  font-size: 12px;
+  color: #7f8c8d;
+  font-style: italic;
+  margin: 10px 0;
+  outline: none;
+}
+
+.add-button {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #ddd;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.drag-handle {
+  text-align: right;
+  color: #ddd;
+  font-size: 18px;
+  cursor: grab;
+}
