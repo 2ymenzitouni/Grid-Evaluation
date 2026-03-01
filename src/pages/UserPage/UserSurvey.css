@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --success: #10b981;
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --border: #e2e8f0;
+}
+
+.survey-wrapper {
+  background-color: var(--bg);
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 100px 20px;
+}
+
+/* HEADER FIXE */
+.survey-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.progress-container {
+  height: 6px;
+  background: #f1f5f9;
+}
+.progress-bar-top {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.4s ease;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.live-score-badge span {
+  background: var(--text);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+/* CARDS */
+.survey-main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.survey-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border);
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.crit-row {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+}
+.crit-subtitle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+.crit-hint {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 4px 0 20px 0;
+}
+
+/* SLIDER STYLES */
+.slider-group {
+  margin-bottom: 25px;
+}
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.entity-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.current-level-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Dynamique des couleurs du texte selon le niveau */
+.current-level-text[data-level='1'] {
+  color: #f59e0b;
+  background: #fffbeb;
+}
+.current-level-text[data-level='2'] {
+  color: #3b82f6;
+  background: #eff6ff;
+}
+.current-level-text[data-level='3'] {
+  color: #8b5cf6;
+  background: #f5f3ff;
+}
+.current-level-text[data-level='4'] {
+  color: #10b981;
+  background: #ecfdf5;
+}
+
+/* LE SLIDER LUI-MÊME */
+.modern-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: #e2e8f0;
+  outline: none;
+  margin: 15px 0 5px 0;
+}
+
+.modern-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.modern-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: #cbd5e1;
+  font-size: 10px;
+}
+
+/* FOOTER NAV */
+.survey-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-btns {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+}
+.btn-next,
+.btn-finish {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-finish {
+  background: var(--success);
+}
+.btn-back {
+  padding: 18px 30px;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

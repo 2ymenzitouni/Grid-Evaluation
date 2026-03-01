@@ -1,0 +1,388 @@
+/* ==========================================================================
+   1. VARIABLES & RESET
+   ========================================================================== */
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #8b5cf6;
+  --secondary-dark: #7c3aed;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+.body-container {
+  padding: 40px 20px;
+  background-color: var(--bg-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+     2. BOUTONS & NAVIGATION
+     ========================================================================== */
+.back-button {
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateX(-3px);
+}
+
+.grid-title {
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* ==========================================================================
+     3. SECTION ÉTUDIANTS
+     ========================================================================== */
+.students-section {
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.students-section h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.students-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.student-input-group {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.student-input-group:focus-within {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.student-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.remove-student-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0 5px;
+  transition: color 0.2s;
+}
+
+.remove-student-btn:hover {
+  color: var(--danger);
+}
+
+.student-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.add-student-btn,
+.save-students-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.add-student-btn {
+  background: #e2e8f0;
+  color: var(--text-main);
+}
+
+.save-students-btn {
+  background: var(--success);
+  color: white;
+}
+
+.add-student-btn:hover,
+.save-students-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+     4. STRUCTURE DU TABLEAU (GRILLE)
+     ========================================================================== */
+.table-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
+.eval-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 12px;
+}
+
+th {
+  background: #334155;
+  color: white;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.column-cell {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 15px;
+  vertical-align: top;
+  min-width: 320px;
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+     5. CARTE DE CRITÈRE (TASK CARD)
+     ========================================================================== */
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.task-card.is-common-card {
+  border-left: 6px solid var(--secondary);
+}
+
+.task-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.common-toggle-btn {
+  font-size: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  /* background: white; */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.common-toggle-btn.active {
+  background: #8b5cf6;
+  color: white;
+  border-color: var(--secondary-dark);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+}
+
+.editable-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 15px;
+  outline: none;
+  min-height: 1.2em;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.editable-title:focus {
+  background: #f1f5f9;
+}
+
+/* ==========================================================================
+     6. SOUS-CRITÈRES MULTIPLES (SUB-TITLES)
+     ========================================================================== */
+.sub-criteria-container {
+  margin-bottom: 15px;
+}
+
+.sub-criteria-item {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.sub-criteria-item:hover {
+  background: #f1f5f9;
+}
+
+.sub-criteria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.editable-subtitle {
+  font-size: 0.8rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  outline: none;
+  flex: 1;
+  letter-spacing: 0.5px;
+  min-height: 1em;
+}
+
+.delete-sub-btn {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 0 0 10px;
+}
+
+.delete-sub-btn:hover {
+  color: var(--danger);
+}
+
+.explication-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  outline: none;
+  margin: 0;
+  min-height: 1.2em;
+}
+
+/* ==========================================================================
+     7. BOUTONS D'AJOUT (PLUS)
+     ========================================================================== */
+.add-sub-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  color: #64748b;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-top: 5px;
+}
+
+.add-sub-btn:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  color: #475569;
+}
+
+.add-button {
+  width: 100%;
+  padding: 18px;
+  background: white;
+  border: 2px dashed #cbd5e1;
+  color: #94a3b8;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+.add-button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #eff6ff;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  color: #cbd5e1;
+  cursor: grab;
+}
+
+/* ==========================================================================
+     8. RESPONSIVE UTILS
+     ========================================================================== */
+@media (max-width: 768px) {
+  .column-cell {
+    min-width: 280px;
+  }
+  .grid-title {
+    font-size: 1.8rem;
+  }
+}
